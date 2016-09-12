@@ -37,9 +37,18 @@
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-compiler-plugin</artifactId>
         		<version>3.3</version>
+        		 <executions>
+        			 <execution>
+        			 	<id>copy-dependencies</id>
+        			 	<phase>package</phase>
+        		 		<goals>
+              					<goal>compile</goal>
+            				</goals>
         		<configuration>
           			<verbose>true</verbose>          		
         		</configuration>
+        			</execution>
+			 </executions>
      		 </plugin>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
